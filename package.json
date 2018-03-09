@@ -1,0 +1,26 @@
+{
+  "name": "one-separator-decimal-mask",
+  "version": "0.0.1",
+  "description": "Converts input value to a floating-point number with separator decimal passed as paramater, locale is irrelevant. Using one-separator-decimal.",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "cross-env NODE_ENV=test mocha test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tiago-marques/one-separator-decimal-mask.git"
+  },
+  "author": "tiago-marques",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tiago-marques/one-separator-decimal-mask/issues"
+  },
+  "homepage": "https://github.com/tiago-marques/one-separator-decimal-mask#readme",
+  "devDependencies": {
+    "cross-env": "^5.1.3",
+    "mocha": "^5.0.4"
+  },
+  "dependencies": {
+    "one-separator-decimal": "^0.1.3"
+  }
+}
