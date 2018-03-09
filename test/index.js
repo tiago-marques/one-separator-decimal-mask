@@ -33,6 +33,12 @@ describe('one-separator-decimal-mask', function () {
         });
     });
 
+    describe('Number input values', function () {
+        it('should return "10" when the value is `10`', function () {
+            assert.equal(mask("10"), "10");
+        });
+    });
+
     describe('Last index is not a number', function () {
         it('should return "10" when the value is `10,0`', function () {
             assert.equal(mask("10,0"), "10");
