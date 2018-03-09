@@ -28,8 +28,8 @@ const assert = require('assert');
 describe('one-separator-decimal-mask', function () {
 
     describe('NaN', function () {
-        it('should return NaN when the value is `test`', function () {
-            assert.deepStrictEqual(mask("test"), NaN);
+        it('should return "" when the value is `test`', function () {
+            assert.deepStrictEqual(mask("test"), "");
         });
     });
 

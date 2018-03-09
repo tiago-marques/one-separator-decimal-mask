@@ -4,7 +4,7 @@
 
 [![NPM](https://nodei.co/npm/one-separator-decimal-mask.png)](https://nodei.co/npm/one-separator-decimal-mask/)
 
-Converts input value to a floating-point number with separator decimal passed as paramater, locale is irrelevant. Using one-separator-decimal.
+* Converts input value to a string with separator decimal passed as paramater, locale is irrelevant. Using one-separator-decimal.
 
 ## Install
 
@@ -31,7 +31,7 @@ Converts input value to a floating-point number with separator decimal passed as
 
 ### NaN
 
-    √ should return NaN when the value is `test`
+    √ should return "" when the value is `test`
 
 ### Last index is not a number
 
