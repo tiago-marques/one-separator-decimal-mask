@@ -43,21 +43,37 @@ describe('one-separator-decimal-mask', function () {
         it('should return "10" when the value is `10,0`', function () {
             assert.equal(mask("10,0"), "10");
         });
-        it('should return "10" when the value is `10,,`', function () {
-            assert.equal(mask("10,,"), "10");
+        it('should return "10." when the value is `10,,`', function () {
+            assert.equal(mask("10,,"), "10.");
         });
-        it('should return "10" when the value is `10..`', function () {
-            assert.equal(mask("10.."), "10");
+        it('should return "10." when the value is `10..`', function () {
+            assert.equal(mask("10.."), "10.");
+        });
+        it('should return "1000." when the value is `10,00,`', function () {
+            assert.equal(mask("10,00,"), "1000.");
+        });
+        it('should return "1000." when the value is `10.00.00`', function () {
+            assert.equal(mask("10.00."), "1000.");
         });
     });
 
     describe('Must return the input value', function () {
-        it('should return "10," when the value is `10,`', function () {
-            assert.equal(mask("10,"), "10,");
+        it('should return "10." when the value is `10,`', function () {
+            assert.equal(mask("10,"), "10.");
         });
         it('should return "10." when the value is `10.`', function () {
             assert.equal(mask("10."), "10.");
         });
+    });
+
+    describe('Second dot or comma', function () {
+        it('should return "1000" when the value is `10,00,00`', function () {
+            assert.equal(mask("10,00,00"), "1000");
+        });
+        it('should return "1000" when the value is `10.00.00`', function () {
+            assert.equal(mask("10.00.00"), "1000");
+        });
+        
     });
 
 });
