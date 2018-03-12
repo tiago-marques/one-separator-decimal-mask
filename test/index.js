@@ -33,15 +33,26 @@ describe('one-separator-decimal-mask', function () {
         });
     });
 
-    describe('Number input values', function () {
+    describe('Integer number input values', function () {
         it('should return "10" when the value is `10`', function () {
             assert.equal(mask("10"), "10");
         });
     });
+    describe('Floating number input values', function () {
+        it('should return "10.60" when the value is `10.60`', function () {
+            assert.equal(mask("10.60"), "10.60");
+        });
+        it('should return "10.601" when the value is `10.601`', function () {
+            assert.equal(mask("10.601"), "10.601");
+        });
+    });
 
     describe('Last index is not a number', function () {
-        it('should return "10" when the value is `10,0`', function () {
-            assert.equal(mask("10,0"), "10");
+        it('should return "10.0" when the value is `10,0`', function () {
+            assert.equal(mask("10,0"), "10.0");
+        });
+        it('should return "10.0" when the value is `10.0`', function () {
+            assert.equal(mask("10.0"), "10.0");
         });
         it('should return "10." when the value is `10,,`', function () {
             assert.equal(mask("10,,"), "10.");
@@ -67,13 +78,12 @@ describe('one-separator-decimal-mask', function () {
     });
 
     describe('Second dot or comma', function () {
-        it('should return "1000" when the value is `10,00,00`', function () {
-            assert.equal(mask("10,00,00"), "1000");
+        it('should return "1000.01" when the value is `10,00,01`', function () {
+            assert.equal(mask("10,00,01"), "1000.01");
         });
-        it('should return "1000" when the value is `10.00.00`', function () {
-            assert.equal(mask("10.00.00"), "1000");
+        it('should return "1000.01" when the value is `10.00.01`', function () {
+            assert.equal(mask("10.00.01"), "1000.01");
         });
-        
     });
 
 });
