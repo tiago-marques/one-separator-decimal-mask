@@ -30,19 +30,24 @@
 ## Validations
 
 ### NaN
-
     √ should return "" when the value is `test`
-
+### Integer number input values
+    √ should return "10" when the value is `10`
+### Floating number input values
+    √ should return "10.0" when the value is `10,0`
+    √ should return "10.0" when the value is `10.0`
+    √ should return "10.60" when the value is `10.60`
+    √ should return "10.601" when the value is `10.601`
 ### Last index is not a number
-
-    √ should return "10" when the value is `10,0`
-    √ should return "10" when the value is `10,,`
-    √ should return "10" when the value is `10..`
-
-### Must return the input value
-
-    √ should return "10," when the value is `10,`
+    √ should return "10." when the value is `10,`
     √ should return "10." when the value is `10.`
+    √ should return "10." when the value is `10,,`
+    √ should return "10." when the value is `10..`
+    √ should return "1000." when the value is `10,00,`
+    √ should return "1000." when the value is `10.00.00`
+### Second dot or comma
+    √ should return "1000.01" when the value is `10,00,01`
+    √ should return "1000.01" when the value is `10.00.01`
 
 ## License
 
