@@ -21,6 +21,6 @@
     "mocha": "^5.0.4"
   },
   "dependencies": {
-    "one-separator-decimal": "^0.1.3"
+    "one-separator-decimal": "^0.1.4"
   }
 }
