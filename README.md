@@ -24,7 +24,7 @@
     *
     */
     let result = mask('10,,')
-    //result = "10"
+    //result = "10."
 ```
 
 ## Validations
