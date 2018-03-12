@@ -1,6 +1,6 @@
 {
   "name": "one-separator-decimal-mask",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Converts input value to a string with separator decimal passed as paramater, locale is irrelevant. Using one-separator-decimal.",
   "main": "lib/index.js",
   "scripts": {
