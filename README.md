@@ -1,6 +1,7 @@
 # one-separator-decimal-mask
 
 ![travis-ci.org](https://api.travis-ci.org/tiago-marques/one-separator-decimal-mask.svg?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/tiago-marques/one-separator-decimal-mask/badge.svg?branch=master)](https://coveralls.io/github/tiago-marques/one-separator-decimal-mask?branch=master)
 
 [![NPM](https://nodei.co/npm/one-separator-decimal-mask.png)](https://nodei.co/npm/one-separator-decimal-mask/)
 
